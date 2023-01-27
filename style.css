@@ -38,3 +38,26 @@ p {
 #add-point-button.active {
   transform: scale(0.9);
 }
+
+
+#reset-button {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  width: 150px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  transition: all 0.3s;
+}
+
+#reset-button.active {
+  transform: scale(0.9);
+}
+
+
+
+

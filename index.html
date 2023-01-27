@@ -5,11 +5,31 @@
     <link rel="icon" type="image/png" href="clickbutton.png">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
+
+  <body onload="reset()">
     <h1>Haz clicks en el botón !</h1>
     <button id="add-point-button">Haz click aquí</button>
     <p id="score">Clicks: 0</p>
-
+    <button id="reset-button" class="reset-button">Reiniciar Clicks</button>
+    <p id="max-score">Máximos clicks: 0</p>
+    <img id="audio-icon" src="play.png" onclick="toggleAudio()" style="width: 30px; height: 30px; position: absolute; top: 10px; right: 10px;">
+    <audio id="game-audio" src="fondo.mp3" loop></audio>
+    
+    <script>
+      var audio = document.getElementById("game-audio");
+      var audioIcon = document.getElementById("audio-icon");
+      
+      function toggleAudio() {
+        if (audio.paused) {
+          audio.play();
+          audioIcon.src = "audio-on.png";
+        } else {
+          audio.pause();
+          audioIcon.src = "audio-off.png";
+        }
+      }
+    </script>
+    
     <script src="game.js"></script>
   </body>
 </html>
